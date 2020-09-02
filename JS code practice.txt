@@ -1,0 +1,159 @@
+// Leap Year
+
+let year = 2020;
+
+if ( year % 400 === 0){
+  console.log("It's a leap year");
+}
+else if ( year % 100 === 0){
+  console.log("It's not a leap year");
+}
+else if ( year % 4 === 0){
+  console.log("It's a leap year");
+}
+else{
+  console.log("It's not a leap year");
+}
+
+function factorial(num){
+  let factorial = 1; 
+  let i;
+  for( i = 1; i <= num; i++){
+    factorial = factorial * i;
+  }
+
+  return (i, factorial);
+}
+
+console.log(factorial(5));
+
+// Factorial With While Loop
+
+function factorial(num){
+
+let i = 1;
+
+let fact = 1;
+
+while(i <= num){
+  fact = fact * i;
+  i++;
+}
+return fact;
+}
+
+const res = factorial(5);
+console.log(res);
+
+// Factorial with a recursive way
+
+function fact(num){
+if(num === 0){
+  return 1;
+}
+
+else {
+  return num * fact(num - 1);
+}
+}
+
+console.log(fact(3));
+
+// Fibo with for looop
+
+function fibonacci(num){
+
+
+let fib = [0, 1];
+
+for (let i = 2; i <= num; i++){
+    
+     fib[i] = fib[i-2] + fib[i-1];
+}
+return fib;
+}
+
+console.log(fibonacci(10));
+
+
+// Fibo with While Loop
+
+function fib(n){
+
+const fib = [0,1 ];
+let i = 2;
+
+while(i <= n){
+  fib[i] = fib[i-2] + fib[i-1];
+  i++;
+}
+return fib;
+}
+
+console.log(fib(10));
+
+//Fibo Recursive Way
+
+function fibo(n){
+  if(n===0){
+    return 0;
+  }
+else if(n===1){
+  return 1;
+}
+else{
+  return fibo(n-1) + fibo(n-2);
+}
+}
+
+console.log(fibo(10));
+
+
+//FiboSeries
+
+function fiboSeries(num){
+
+  if(num === 0){
+    return [0];
+  }
+  else if (num === 1){
+    return [0,1];
+  }
+  else{
+    var fibo = fiboSeries(num-1);
+    var newElement = fibo[num-1]+fibo[num-2];
+    fibo.push(newElement);
+    return fibo;
+  }
+}
+
+console.log(fiboSeries(10));
+
+//Factorial
+
+function factorial(num){
+  let fact = 1;
+
+  if(num === 0){
+    return 1;
+  }
+  else{
+    return num * factorial(num - 1);
+  }
+}
+
+console.log(factorial(5));
+
+
+// Prime Number
+
+function isPrime(num){
+  for(let i = 2; i < num; i++){
+    if( num % i === 0){
+      return "It's not a prime number";
+    }
+  }
+      return "It's a prime number";
+}
+
+console.log(isPrime(17));
